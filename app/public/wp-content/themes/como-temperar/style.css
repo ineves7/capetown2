@@ -1,0 +1,258 @@
+/*
+Theme Name: Capetown
+Theme URI: https://capetown.com
+Author: Iago Neves
+Author URI: https://capetown.com
+Description: Tema criado para Blog culinário.
+Requires at least: 6.4
+Tested up to: 6.6
+Requires PHP: 7.0
+Version: 1.2
+*/
+
+
+:root {
+  --color-azul: #00A1D6; /* Azul oceano */
+  --color-amarelo: #F9A825; /* Amarelo sol */
+  --color-salmao: #FF5733; /* Coral (para botões ou destaques) */
+  --color-azulclaro: #F0F8FF; /* Azul claro para fundo */
+  --color-cinza: #333333; /* Cor para textos principais */
+  --text-branco: #FFFFFF; /* Texto claro para fundos escuros */
+  --color-azulescuro: #0288D1; /* Azul mais escuro para hover em botões */
+}
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+/* Reset End */
+
+
+body, a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner {
+  position: relative; /* Necessário para o pseudoelemento ::before */
+  background-image: url('img/condiment3.jpg'); /* Troque pela sua imagem */
+  background-size: cover; /* A imagem cobre todo o banner */
+  background-position: center; /* Centraliza a imagem */
+  height: 70vh; /* O banner ocupa 70% da altura da viewport */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Sombra escura semi-transparente */
+  z-index: 1; /* Overlay está abaixo do conteúdo */
+}
+
+.banner-content h1 {
+  font-size: 3rem; /* Tamanho da fonte grande para o título */
+  margin-bottom: 10px;
+  text-shadow: #FFFFFF 1px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+}
+a {
+    text-decoration: none;
+}
+
+#header {
+    height: 4.5rem;
+    padding: 1rem 2.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: var(--color-amarelo);
+    margin: 0;
+    border-bottom: .5px solid black
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem ;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+
+    @media (max-width: 600px) {
+
+      #menu {
+        display: block;
+        position: absolute;
+        height: 0px;
+        width: 100%;
+        top: 4.5rem;
+        right: 0px;
+        text-align: center;
+        background-color: var(--color-cinza);
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        margin: auto 0;
+        position: fixed;
+      }
+      #nav.active #menu {
+        height: calc(100vh - 4.5rem);
+        visibility: visible;
+        overflow-y: auto;;
+      }
+      #reserve {
+        padding-top: 30px;
+      }
+      #menu a {
+        font-weight: 300;
+        font-size: 1.4rem;
+        color: var(--color-amarelo);
+        padding: 1rem 0;
+        transition: .3s;
+      }
+
+        .hr-menu {
+          border: none; 
+          height: 2px; 
+          background-color: #505050; 
+          width: 40px; 
+          margin-top: -5px; 
+        }
+        
+        #menu a:hover {
+          font-size: 1.5rem;
+        }
+
+        #nav.active #menu::-webkit-scrollbar {
+          display: none;
+        }
+
+        #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        }
+
+        #hamburguer {
+          display: block;
+          border-top: 2.5px solid;
+          width: 27px;
+          color: black;
+        }
+
+        #hamburguer::after, #hamburguer::before {
+          content: '';
+          display: block;
+          width: 27px;
+          height: 2px;
+          background: currentColor;
+          margin-top: 7px;
+          transition: .3s;
+        }
+
+        
+        #nav.active #hamburguer {
+        border-top-color: transparent;
+        }
+
+        #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+        margin-top: -2px; 
+        }
+
+        #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        margin-top: -2px;
+        }
+
+        .banner {
+          height: 25vh;
+          padding: 20px;
+        }
+
+        .banner-content h1 {
+          font-size: 2rem;
+          z-index: 1000;
+        }
+        .banner-content p {
+          font-size: 1rem;
+        }
+        .responsive-svg {
+          width: 163.1px; 
+          height: 35px; 
+        }
+
+    }
