@@ -51,16 +51,19 @@
                 <span id="hamburguer"></span>
             </button>
             <ul id="menu" role="menu">
-                <li class="reserve-menu"><a href="https://wa.me/5522999325344?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20reservar%20o%20meu%20passeio!">Reserve Agora!</a></li>
-                <hr>
-                <li><a href="/Roteiro">Roteiro do Passeio</a></li>
+                <li class="first-li"><a href="/Roteiro">Roteiro do Passeio</a></li>
                 <hr>
                 <li><a href="https://www.instagram.com/barcocapetown/">Fotos e Videos</a></li>
                 <hr>
-                <li><a href="/Arraial">Arraial do Cabo</a></li>
+                <li><a href="/Roteiro">Arraial do Cabo</a></li>
                 <hr>
                 <li><a href="https://wa.me/5555229993253?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20duvida.">Contato</a></li>
-                <hr>
+
+                <li ><a class="reserve-agora" href="https://wa.me/5522999325344?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20reservar%20o%20meu%20passeio!">
+                        Reserve Agora!
+                    </a>
+                </li>
+
                 <li>
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg class="svg-icone" width="50px" height="50px" viewBox="0 0 4961 4961" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">

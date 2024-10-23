@@ -66,11 +66,11 @@ table {
 /* Reset End */
 
 
-body {
+body, button {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6, a, button {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6, a {
 
 .svg-icone {
   display:none;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 #btn-mobile {
@@ -158,6 +158,7 @@ nav hr {
         }
 
         .svg-icone {
+          margin-top: 20px;
           display: inline;
           width: 65px;
           height: 65px;
@@ -168,10 +169,30 @@ nav hr {
           font-size: 1.1rem;
           color: var(--color-amarelo);
           padding: 1.2rem 0;
-          transition: .3s;
+          transition: .3s;;
         }
-        .reserve-menu{
-          padding-top: 30px;
+        .first-li{
+          padding-top: 40px;
+        }
+
+        .reserve-agora {
+          margin-top: 10px;  
+          background-color: var(--color-amarelo);
+          color: var(--color-cinza)!important;
+          animation: bounce 1s infinite; /* Adiciona a animação */
+        }
+
+        .animated-button {
+          background-color: #3498db;
+          color: white;
+          border: none;
+          padding: 15px 30px;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 8px;
+          outline: none;
+          transition: background-color 0.3s ease;
+          animation: bounce 1s infinite; /* Adiciona a animação */
         }
 
         #nav.active #menu::-webkit-scrollbar {
@@ -225,4 +246,13 @@ nav hr {
           overflow-y: visible;
 
         }
+        @keyframes bounce {
+          0%, 100% {
+            font-size: 1.1rem;; 
+          }
+          50% {
+            font-size: 1.2rem; }
+          }
     }
+
+    
