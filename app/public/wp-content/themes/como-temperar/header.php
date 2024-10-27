@@ -52,15 +52,15 @@
             </button>
             <ul id="menu" role="menu">
                 <li class="first-li"><a href="/Roteiro">Roteiro do Passeio</a></li>
-                <hr>
+
                 <li><a href="https://www.instagram.com/barcocapetown/">Fotos e Videos</a></li>
-                <hr>
+
                 <li><a href="/Roteiro">Arraial do Cabo</a></li>
-                <hr>
+
                 <li><a href="https://wa.me/5555229993253?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20duvida.">Contato</a></li>
 
-                <li ><a class="reserve-agora" href="https://wa.me/5522999325344?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20reservar%20o%20meu%20passeio!">
-                        Reserve Agora!
+                <li><a id="reserve-menu" href="https://wa.me/5522999325344?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20reservar%20o%20meu%20passeio!">
+                        Reserve Agora!!
                     </a>
                 </li>
 

@@ -115,28 +115,20 @@ h1, h2, h3, h4, h5, h6, a, button {
     display: none;
 }
 
-nav hr {
-  border: none; /* Remove a borda padrão */
-  height: 2px; /* Define a espessura da linha */
-  background-color: #666666; /* Define a cor da linha */
-  width: 30px; /* Define a largura da linha */
-  margin: auto; /* Adiciona espaço ao redor da linha */
-  visibility: hidden;
-  transition: .6s;
-}
-
 
     @media (max-width: 600px) {
 
         #header {
-          padding-left: 3rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          height: 15vh;
         }
         #menu {
           display: block;
           position: absolute;
           height: 0px;
           width: 100%;
-          top: 5.5rem;
+          top: 15vh;
           right: 0px;
           text-align: center;
           background-color: var(--color-cinza);
@@ -149,50 +141,42 @@ nav hr {
         #nav.active #menu {
           height: calc(100vh - 5.5rem);
           visibility: visible;
-          overflow-y: auto;;
+          overflow-y: auto;
         }
 
-        .svg-logo {
-          width: 163px;
-          height: 35px;
-        }
-
-        .svg-icone {
-          margin-top: 20px;
-          display: inline;
-          width: 65px;
-          height: 65px;
+        .first-li {
+          margin-top: 10vh ;
         }
 
         #menu a {
           font-weight: 300;
-          font-size: 1.1rem;
+          font-size: 1.5rem;
           color: var(--color-amarelo);
-          padding: 1.2rem 0;
-          transition: .3s;;
-        }
-        .first-li{
-          padding-top: 40px;
+          padding: 1rem 0 0 0;
+          margin: 1rem 0;
+          transition: .3s;
         }
 
-        .reserve-agora {
-          margin-top: 10px;  
-          background-color: var(--color-amarelo);
-          color: var(--color-cinza)!important;
-          animation: bounce 1s infinite; /* Adiciona a animação */
+          #menu a::after {
+          content: "";
+          display: block;
+          width: 30px; /* Largura máxima da linha */
+          height: 1px; /* Espessura da linha */
+          background-color: #ccc; /* Cor da linha */
+          margin: .7rem auto 0 auto; /* Centraliza a linha horizontalmente */
         }
 
-        .animated-button {
-          background-color: #3498db;
-          color: white;
-          border: none;
-          padding: 15px 30px;
-          font-size: 16px;
-          cursor: pointer;
-          border-radius: 8px;
-          outline: none;
-          transition: background-color 0.3s ease;
-          animation: bounce 1s infinite; /* Adiciona a animação */
+        .svg-logo {
+          width: 198px;
+          height: 43px;
+        }
+
+        .svg-icone {
+          margin-top: 2rem;
+          display: inline;
+          width: 5rem;
+          height: 5rem;
+          bottom: 0;
         }
 
         #nav.active #menu::-webkit-scrollbar {
@@ -201,7 +185,6 @@ nav hr {
 
         #btn-mobile {
         display: flex;
-        padding: .5rem 1rem;
         font-size: 1rem;
         border: none;
         background: none;
@@ -212,17 +195,17 @@ nav hr {
         #hamburguer {
           display: block;
           border-top: 2px solid;
-          width: 25px;
+          width: 30px;
           color: black;
         }
 
         #hamburguer::after, #hamburguer::before {
           content: '';
           display: block;
-          width: 25px;
+          width: 30px;
           height: 2px;
           background: currentColor;
-          margin-top: 7px;
+          margin-top: 9px;
           transition: .3s;
         }
 
@@ -240,19 +223,6 @@ nav hr {
         margin-top: -2px;
         }
 
-        #nav.active hr {
-          transition: .6s;
-          visibility: visible;
-          overflow-y: visible;
-
-        }
-        @keyframes bounce {
-          0%, 100% {
-            font-size: 1.1rem;; 
-          }
-          50% {
-            font-size: 1.2rem; }
-          }
     }
 
     
